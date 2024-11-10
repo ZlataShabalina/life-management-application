@@ -1,0 +1,58 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lifeManagementApp.Weather"
+             Title="Weather"
+             BackgroundColor="#E0F7E7">
+
+    <StackLayout Padding="20" Spacing="10" BackgroundColor="#E0F7E7">
+        <Label Text="Enter City:" FontSize="Medium" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Editor x:Name="editor" Placeholder="Type city name here" TextChanged="OnEditorTextChanged" 
+                    HorizontalOptions="FillAndExpand"/>
+            <Button Text="Get Weather" Clicked="CityClick" 
+                    BackgroundColor="#4CAF50" TextColor="White" 
+                    HorizontalOptions="End" Margin="10,0,0,0"/>
+        </StackLayout>
+
+        <StackLayout x:Name="CityInfoStack" IsVisible="False">
+            <Label x:Name="CityLabel" FontSize="30" FontAttributes="Bold" TextColor="#388E3C" />
+
+            <Label x:Name="CountryLabel" FontSize="30" TextColor="#66BB6A" />
+
+        </StackLayout>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout x:Name="MinTemperatureStack" Grid.Column="0" IsVisible="False" Margin="0,10,0,0">
+                <Label Text="Min Temperature:" FontSize="Small" />
+                <Label x:Name="MinTemperatureLabel" FontSize="Medium" />
+            </StackLayout>
+
+            <StackLayout x:Name="MaxTemperatureStack" Grid.Column="1" IsVisible="False" Margin="0,10,0,0">
+                <Label Text="Max Temperature:" FontSize="Small" />
+                <Label x:Name="MaxTemperatureLabel" FontSize="Medium" />
+            </StackLayout>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout x:Name="RainForecastStack" Grid.Column="0" IsVisible="False">
+                <Label Text="Rain Forecast:" FontSize="Small" />
+                <Label x:Name="RainForecastLabel" FontSize="Medium" />
+            </StackLayout>
+
+            <StackLayout x:Name="WindSpeedStack" Grid.Column="1" IsVisible="False" >
+                <Label Text="Wind Speed:" FontSize="Small" />
+                <Label x:Name="WindSpeedLabel" FontSize="Medium" />
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

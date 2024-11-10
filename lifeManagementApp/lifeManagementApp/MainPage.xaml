@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lifeManagementApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="logo.png"
+                HeightRequest="185"
+                Aspect="AspectFit"/>
+
+            <Label
+                Text="Welcome to LifeSync."
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Your life &#10;management application."
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2" />
+
+            <Button
+                x:Name="WeatherBtn"
+                Text="Local weather" 
+                Clicked="WeatherClick"
+                WidthRequest="150"
+                BackgroundColor="Green"
+                HeightRequest="50"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="TodoBtn"
+                Text="To-Do list" 
+                Clicked="TodoClick"
+                WidthRequest="150"
+                BackgroundColor="Green"
+                HeightRequest="50"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

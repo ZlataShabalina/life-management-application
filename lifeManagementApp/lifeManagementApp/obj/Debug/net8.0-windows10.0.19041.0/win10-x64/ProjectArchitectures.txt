@@ -1,0 +1,1 @@
+C:\Users\adm\Documents\ClientSidePro\life-management-application\lifeManagementApp\lifeManagementApp\lifeManagementApp.csproj;x64
